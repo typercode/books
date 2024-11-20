@@ -1,0 +1,27 @@
+{"error":0,"data":{"inNA":0,"room_id":"491416","rtmp_cdn":"ws","rtmp_live":"491416rhg5RNaNuV_900.flv?wsAuth=4fae2f0071bdbac78c3aa05ef0f73279&token=web-douyu-45623985-491416-46d2f6a80c0564c8bb53a8725dd3d41b&logo=0&expire=0&did=BA3956FB7FE6ADFEF7791DD858ED83C0&ver=2016092701","rtmp_url":"http:\/\/hdl1a.douyucdn.cn\/live","rateSwitch":1,"ggad":{"videop":"","play2":"","play3":"","play1":""}}}
+
+
+
+
+http:\/\/hdl1a.douyucdn.cn\/live/491416rhg5RNaNuV_900.flv?wsAuth=4fae2f0071bdbac78c3aa05ef0f73279&token=web-douyu-45623985-491416-46d2f6a80c0564c8bb53a8725dd3d41b&logo=0&expire=0&did=BA3956FB7FE6ADFEF7791DD858ED83C0&ver=2016092701
+
+
+
+239.255.255.250:1900
+
+
+http://30.96.176.215:49154/TxMediaRenderer_desc.xml
+
+113	3.371420	30.96.180.37	224.0.0.251	MDNS	54	Standard query response 0x0000
+
+
+Is-Parallel-Programming-Hard-And-If-So-What-Can-You-Do-About-It-?
+
+
+
+java -XX:+PrintFlagsInitial
+
+
+java -XX:+PrintFlagsFinal class
+
+jinfo pid

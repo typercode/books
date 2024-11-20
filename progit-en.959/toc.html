@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <title>Pro Git</title>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+    <link rel="stylesheet" type="text/css" href="theme/html/html.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body data-type="book">
+    <div class="navbar">
+      <h1>Pro Git</h1>
+      <p></p>
+    </div>
+    
+<p><nav data-type="toc">
+<ol>
+  <li data-type="preface">
+    <a href="preface.html">Preface by Scott Chacon</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="preface">
+    <a href="preface.html">Preface by Ben Straub</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="preface">
+    <a href="preface.html">Dedications</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="preface">
+    <a href="contributors.html">Contributors</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="preface">
+    <a href="introduction.html">Introduction</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-introduction.html">Getting Started</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-introduction.html#about-version-control-BDHOf9">About Version Control</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-introduction.html#local-version-control-systems-EDHoUOf2">Local Version Control Systems</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#centralized-version-control-systems-zxHNuOfk">Centralized Version Control Systems</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#distributed-version-control-systems-PlHMT6fA">Distributed Version Control Systems</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-introduction.html#a-short-history-of-git-5xHJUG">A Short History of Git</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-introduction.html#git-basics-edHxu5">Git Basics</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-introduction.html#snapshots-not-differences-zxHVfbuk">Snapshots, Not Differences</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#nearly-every-operation-is-local-PlH8UQuA">Nearly Every Operation Is Local</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#git-has-integrity-qmH4uDud">Git Has Integrity</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#git-generally-only-adds-data-7wHgTruq">Git Generally Only Adds Data</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#the-three-states-ReHMS4ux">The Three States</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-introduction.html#the-command-line-EDHxTe">The Command Line</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-introduction.html#installing-git-zxHMSJ">Installing Git</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-introduction.html#installing-on-linux-7wHqUZSq">Installing on Linux</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#installing-on-mac-ReHdugSx">Installing on Mac</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#installing-on-windows-kJHETkS1">Installing on Windows</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#installing-from-source-WlHkSzSJ">Installing from Source</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-introduction.html#_first_time">First-Time Git Setup</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-introduction.html#your-identity-xoHdSws7">Your Identity</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#your-editor-ADHks5sy">Your Editor</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-introduction.html#checking-your-settings-mmHaIMsY">Checking Your Settings</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-introduction.html#_git_help">Getting Help</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-introduction.html#summary-7wHJtN">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-git-basics.html">Git Basics</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#_getting_a_repo">Getting a Git Repository</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#initializing-a-repository-in-an-existing-directory-NkteiLie">Initializing a Repository in an Existing Directory</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_git_cloning">Cloning an Existing Repository</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#recording-changes-to-the-repository-a6tesP">Recording Changes to the Repository</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_checking_status">Checking the Status of Your Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_tracking_files">Tracking New Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#staging-modified-files-l4tbIosG">Staging Modified Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#short-status-7mt0fys1">Short Status</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_ignoring">Ignoring Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_git_diff_staged">Viewing Your Staged and Unstaged Changes</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_committing_changes">Committing Your Changes</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#skipping-the-staging-area-K8tMFJsg">Skipping the Staging Area</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_removing_files">Removing Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_git_mv">Moving Files</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#_viewing_history">Viewing the Commit History</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#limiting-log-output-RetVtluY">Limiting Log Output</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#_undoing">Undoing Things</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_unstaging">Unstaging a Staged File</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#unmodifying-a-modified-file-K8t5cgTg">Unmodifying a Modified File</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#_remote_repos">Working with Remotes</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#showing-your-remotes-m3tRiEHa">Showing Your Remotes</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#adding-remote-repositories-ZRtjsPHw">Adding Remote Repositories</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_fetching_and_pulling">Fetching and Pulling from Your Remotes</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_pushing_remotes">Pushing to Your Remotes</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_inspecting_remote">Inspecting a Remote</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#removing-and-renaming-remotes-2at8IdHV">Removing and Renaming Remotes</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#_git_tagging">Tagging</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#listing-your-tags-ZRtyijIw">Listing Your Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#creating-tags-l4tYslIG">Creating Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_annotated_tags">Annotated Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#lightweight-tags-b6t5TxI1">Lightweight Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#tagging-later-2atMHeIV">Tagging Later</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#_sharing_tags">Sharing Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-basics.html#checking-out-tags-K8t9fAIg">Checking out Tags</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#_git_aliases">Git Aliases</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-basics.html#summary-ZRtEU4">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-git-branching.html">Git Branching</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-branching.html#_git_branches_overview">Branches in a Nutshell</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_create_new_branch">Creating a New Branch</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_switching_branches">Switching Branches</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-branching.html#basic-branching-and-merging-QjtQTA">Basic Branching and Merging</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_basic_branching">Basic Branching</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_basic_merging">Basic Merging</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_basic_merge_conflicts">Basic Merge Conflicts</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-branching.html#_branch_management">Branch Management</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-branching.html#branching-workflows-bqtwsx">Branching Workflows</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#long-running-branches-x5t7Hwsm">Long-Running Branches</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_topic_branch">Topic Branches</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-branching.html#_remote_branches">Remote Branches</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_pushing_branches">Pushing</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_tracking_branches">Tracking Branches</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#pulling-YPteuBIg">Pulling</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_delete_branches">Deleting Remote Branches</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-branching.html#_rebasing">Rebasing</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#the-basic-rebase-Jpt3HAfl">The Basic Rebase</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#more-interesting-rebases-1GtbuxfN">More Interesting Rebases</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_rebase_peril">The Perils of Rebasing</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#_rebase_rebase">Rebase When You Rebase</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-branching.html#rebase-vs-merge-VPtgskfd">Rebase vs. Merge</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-branching.html#summary-M2t8Uk">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-git-server.html">Git on the Server</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-server.html#the-protocols-bvtxI1">The Protocols</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-server.html#local-protocol-JptzikIG">Local Protocol</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-server.html#the-http-protocols-W5t0HmIn">The HTTP Protocols</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-server.html#the-ssh-protocol-6kt1hYIN">The SSH Protocol</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-server.html#the-git-protocol-wVtqIPI1">The Git Protocol</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#_git_on_the_server">Getting Git on a Server</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-server.html#_bare_repo">Putting the Bare Repository on a Server</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-server.html#small-setups-KNt1cLTB">Small Setups</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#_generate_ssh_key">Generating Your SSH Public Key</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#_setting_up_server">Setting Up the Server</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#git-daemon-6ktnUE">Git Daemon</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#smart-http-wVt6cr">Smart HTTP</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#gitweb-D0tJtP">GitWeb</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#gitlab-lotZFY">GitLab</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-server.html#installation-YRtniBFo">Installation</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-server.html#administration-NgtnHJFR">Administration</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-server.html#basic-usage-KNt0hvFB">Basic Usage</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-server.html#working-together-01tMIWFJ">Working Together</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#third-party-hosted-options-58tVCL">Third Party Hosted Options</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-server.html#summary-YRt5sJ">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-distributed-git.html">Distributed Git</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-distributed-git.html#distributed-workflows-nGI0cM">Distributed Workflows</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#centralized-workflow-B3InSxcg">Centralized Workflow</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_integration_manager">Integration-Manager Workflow</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#dictator-and-lieutenants-workflow-vRIxHgcB">Dictator and Lieutenants Workflow</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#workflows-summary-20IvuacG">Workflows Summary</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-distributed-git.html#_contributing_project">Contributing to a Project</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_commit_guidelines">Commit Guidelines</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_private_team">Private Small Team</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#private-managed-team-lrINixHR">Private Managed Team</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_public_project">Forked Public Project</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_project_over_email">Public Project over Email</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#summary-wrIpIBH9">Summary</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-distributed-git.html#maintaining-a-project-B3I6u5">Maintaining a Project</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#working-in-topic-branches-vRIJSzuB">Working in Topic Branches</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_patches_from_email">Applying Patches from Email</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_checking_out_remotes">Checking Out Remote Branches</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_what_is_introduced">Determining What Is Introduced</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#integrating-contributed-work-3gIMTpua">Integrating Contributed Work</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_tagging_releases">Tagging Your Releases</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_build_number">Generating a Build Number</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_preparing_release">Preparing a Release</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-distributed-git.html#_the_shortlog">The Shortlog</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-distributed-git.html#summary-o9IBTd">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-github.html">GitHub</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-github.html#account-setup-and-configuration-PztOTZ">Account Setup and Configuration</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-github.html#ssh-access-X3txheT5">SSH Access</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#_personal_avatar">Your Avatar</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#your-email-addresses-46tvHYTR">Your Email Addresses</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#two-factor-authentication-QWtoUxT8">Two Factor Authentication</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-github.html#contributing-to-a-project-YjtehW">Contributing to a Project</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-github.html#forking-projects-DPtzsZhw">Forking Projects</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#_github_flow">The GitHub Flow</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#advanced-pull-requests-eNtYIlh5">Advanced Pull Requests</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#markdown-X3tXTvh5">Markdown</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-github.html#_maintaining_gh_project">Maintaining a Project</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-github.html#creating-a-new-repository-Botksgug">Creating a New Repository</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#adding-collaborators-eNt5f1u5">Adding Collaborators</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#managing-pull-requests-X3tNIYu5">Managing Pull Requests</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#mentions-and-notifications-6RtXTYuk">Mentions and Notifications</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#special-files-46t1hQuR">Special Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#readme-QWt7uOu8">README</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#contributing-8dtGH1un">CONTRIBUTING</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#project-administration-2DtoUeuY">Project Administration</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-github.html#_github_orgs">Managing an organization</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-github.html#organization-basics-eNtjs7H5">Organization Basics</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#teams-X3tmflH5">Teams</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#audit-log-6Rt3IVHk">Audit Log</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-github.html#scripting-github-Bot8UJ">Scripting GitHub</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-github.html#hooks-6RtEfaUk">Hooks</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#the-github-api-46tPIbUR">The GitHub API</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#basic-usage-QWt8T8U8">Basic Usage</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#commenting-on-an-issue-8dt7hAUn">Commenting on an Issue</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#changing-the-status-of-a-pull-request-2DtLu4UY">Changing the Status of a Pull Request</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-github.html#octokit-l6tgHJUw">Octokit</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-github.html#summary-eNtRcV">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-git-tools.html">Git Tools</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_revision_selection">Revision Selection</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#single-revisions-oetdHKSV">Single Revisions</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#short-sha-1-eetQSESn">Short SHA-1</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_branch_references">Branch References</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_git_reflog">RefLog Shortnames</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#ancestry-references-3vtys4SA">Ancestry References</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_commit_ranges">Commit Ranges</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_interactive_staging">Interactive Staging</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#staging-and-unstaging-files-3vtDI6hA">Staging and Unstaging Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#staging-patches-z6tos6h6">Staging Patches</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_git_stashing">Stashing and Cleaning</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#stashing-your-work-OmtGSGIk">Stashing Your Work</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#creative-stashing-3vtohVIA">Creative Stashing</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#creating-a-branch-from-a-stash-z6tzIxI6">Creating a Branch from a Stash</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_git_clean">Cleaning your Working Directory</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_signing">Signing Your Work</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#gpg-introduction-Omt3HAsk">GPG Introduction</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#signing-tags-3vt0SgsA">Signing Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#verifying-tags-z6t9h8s6">Verifying Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_signing_commits">Signing Commits</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#everyone-must-sign-rEtGsBsg">Everyone Must Sign</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_searching">Searching</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_git_grep">Git Grep</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#git-log-searching-z6tnSPT6">Git Log Searching</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_rewriting_history">Rewriting History</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_git_amend">Changing the Last Commit</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_changing_multiple">Changing Multiple Commit Messages</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#reordering-commits-YXtMIYf1">Reordering Commits</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_squashing">Squashing Commits</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#splitting-a-commit-J4trTyfR">Splitting a Commit</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#the-nuclear-option-filter-branch-X7t0fqfD">The Nuclear Option: filter-branch</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_git_reset">Reset Demystified</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#the-three-trees-BdtBHGUx">The Three Trees</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#the-workflow-rEt0SlUg">The Workflow</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#the-role-of-reset-YXtnhoU1">The Role of Reset</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#reset-with-a-path-M4tyIKUG">Reset With a Path</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#squashing-J4txs3UR">Squashing</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#check-it-out-X7t3TyUD">Check It Out</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#summary-4dtpfbU1">Summary</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_advanced_merging">Advanced Merging</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#merge-conflicts-M4tJhVcG">Merge Conflicts</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_undoing_merges">Undoing Merges</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#other-types-of-merges-X7tasEcD">Other Types of Merges</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_rerere">Rerere</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#debugging-with-git-rEt4F3">Debugging with Git</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_file_annotation">File Annotation</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_binary_search">Binary Search</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_git_submodules">Submodules</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_starting_submodules">Starting with Submodules</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#_cloning_submodules">Cloning a Project with Submodules</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#working-on-a-project-with-submodules-PEtJsPCY">Working on a Project with Submodules</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#submodule-tips-p0tGTrCE">Submodule Tips</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#issues-with-submodules-9EtJfxCB">Issues with Submodules</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_bundling">Bundling</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_replace">Replace</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#_credential_caching">Credential Storage</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#under-the-hood-net7cGHR">Under the Hood</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-tools.html#a-custom-credential-cache-EEtatdHY">A Custom Credential Cache</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-tools.html#summary-4dtXSX">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-customizing-git.html">Customizing Git</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-customizing-git.html#_git_config">Git Configuration</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#basic-client-configuration-AnTesjIK">Basic Client Configuration</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#colors-in-git-ORTqc8IN">Colors in Git</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#_external_merge_tools">External Merge and Diff Tools</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#formatting-and-whitespace-vdT5F8IE">Formatting and Whitespace</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#server-configuration-nPT6CAIE">Server Configuration</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-customizing-git.html#git-attributes-bRT5hy">Git Attributes</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#binary-files-GpTghPh6">Binary Files</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#_keyword_expansion">Keyword Expansion</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#exporting-your-repository-znTeHVh0">Exporting Your Repository</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#merge-strategies-kaTafzh5">Merge Strategies</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-customizing-git.html#_git_hooks">Git Hooks</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#installing-a-hook-GpTWI2i6">Installing a Hook</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#client-side-hooks-PkTZhKiG">Client-Side Hooks</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#server-side-hooks-znTDi8i0">Server-Side Hooks</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-customizing-git.html#_an_example_git_enforced_policy">An Example Git-Enforced Policy</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#server-side-hook-znTbhbH0">Server-Side Hook</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-customizing-git.html#client-side-hooks-kaTDiyH5">Client-Side Hooks</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-customizing-git.html#summary-GpTpfj">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-git-and-other-scms.html">Git and Other Systems</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-and-other-scms.html#git-as-a-client-WPtgIW">Git as a Client</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#_git_svn">Git and Subversion</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#git-and-mercurial-jzteIAIG">Git and Mercurial</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#git-and-perforce-DYteuvIb">Git and Perforce</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#git-and-tfs-KZtLiwIX">Git and TFS</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-and-other-scms.html#_migrating">Migrating to Git</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#subversion-jztasjuG">Subversion</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#mercurial-DYtzIjub">Mercurial</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#_perforce_import">Perforce</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#_git_tfs">TFS</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-and-other-scms.html#_custom_importer">A Custom Importer</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-and-other-scms.html#summary-ojtGiq">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="chapter">
+    <a href="1-git-internals.html">Git Internals</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#_plumbing_porcelain">Plumbing and Porcelain</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#_objects">Git Objects</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#_tree_objects">Tree Objects</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#_git_commit_objects">Commit Objects</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#object-storage-dZtQcEin">Object Storage</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#_git_refs">Git References</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#_the_head">The HEAD</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#tags-Gwt3TQIo">Tags</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#remotes-n5tvuXIX">Remotes</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#packfiles-QDtDfj">Packfiles</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#_refspec">The Refspec</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#_pushing_refspecs">Pushing Refspecs</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#deleting-references-7ztxclUe">Deleting References</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#transfer-protocols-33tacA">Transfer Protocols</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#the-dumb-protocol-jWtZH1c3">The Dumb Protocol</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#the-smart-protocol-MRt6hEcG">The Smart Protocol</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#protocols-summary-mVt9Tec2">Protocols Summary</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#maintenance-and-data-recovery-6mtXtv">Maintenance and Data Recovery</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#_git_gc">Maintenance</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#_data_recovery">Data Recovery</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#_removing_objects">Removing Objects</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#environment-variables-jWtdFM">Environment Variables</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#global-behavior-mVtbHnF2">Global Behavior</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#repository-locations-0Rtyh4Fa">Repository Locations</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#pathspecs-oEtZT5FE">Pathspecs</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#committing-WDtmu5Fq">Committing</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#networking-1Qtvi5FR">Networking</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#diffing-and-merging-PDtYIlFG">Diffing and Merging</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#debugging-xwtEfDFB">Debugging</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-internals.html#miscellaneous-4gtZUaFv">Miscellaneous</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-internals.html#summary-MRtOC2">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="appendix">
+    <a href="1-git-other-environments.html">Git in Other Environments</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-other-environments.html#graphical-interfaces-e4tqIv">Graphical Interfaces</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-other-environments.html#gitk-and-git-gui-oMt3hzI4">gitk and git-gui</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-other-environments.html#github-for-mac-and-windows-3OtrHWIj">GitHub for Mac and Windows</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-other-environments.html#other-guis-k6tATeIb">Other GUIs</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-other-environments.html#git-in-visual-studio-Qbt8hg">Git in Visual Studio</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-other-environments.html#git-in-eclipse-j6tyH7">Git in Eclipse</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-other-environments.html#git-in-bash-oMtzTx">Git in Bash</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-other-environments.html#git-in-zsh-3OtDil">Git in Zsh</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-other-environments.html#_git_powershell">Git in Powershell</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-other-environments.html#summary-WBt7fp">Summary</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="appendix">
+    <a href="1-embedding-git.html">Embedding Git in your Applications</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-embedding-git.html#command-line-git-bxfOIe">Command-line Git</a>
+            <ol>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-embedding-git.html#libgit2-e4fgtG">Libgit2</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-embedding-git.html#advanced-functionality-Z0fpU9tN">Advanced Functionality</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-embedding-git.html#_libgit2_bindings">Other Bindings</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-embedding-git.html#further-reading-2LfnIltM">Further Reading</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-embedding-git.html#jgit-7WfxT1">JGit</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-embedding-git.html#getting-set-up-m2fZiYTW">Getting Set Up</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-embedding-git.html#plumbing-nQfWIGTl">Plumbing</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-embedding-git.html#porcelain-5MfDtKTK">Porcelain</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-embedding-git.html#further-reading-1vfWTATJ">Further Reading</a>
+  </li>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="appendix">
+    <a href="1-git-commands.html">Git Commands</a>
+            <ol>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#setup-and-config-qJt0Ip">Setup and Config</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-config-0ZtRuVIP">git config</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-help-1VtrI0IL">git help</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#getting-and-creating-projects-XKt7Tb">Getting and Creating Projects</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-init-1VtVuVTL">git init</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-clone-5LtDIGTO">git clone</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#basic-snapshotting-0ZtVsY">Basic Snapshotting</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-add-5Lt8u4sO">git add</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-status-K6txILsv">git status</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-diff-YztbTxsq">git diff</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-difftool-Nytws0sw">git difftool</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-commit-AGtVSOsE">git commit</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-reset-zytwhrs4">git reset</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-rm-m6tOfks1">git rm</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-mv-8ytqUgs9">git mv</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-clean-krtwcGsZ">git clean</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#branching-and-merging-1VtdSd">Branching and Merging</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-branch-K6t3uJSv">git branch</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-checkout-YztgI5Sq">git checkout</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-merge-NytPTXSw">git merge</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-mergetool-AGtqsGSE">git mergetool</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-log-zytxS6S4">git log</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-stash-m6tzh2S1">git stash</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-tag-8ytwfXS9">git tag</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#sharing-and-updating-projects-5Ltdhr">Sharing and Updating Projects</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-fetch-Yzt6uvhq">git fetch</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-pull-Nyt2Iehw">git pull</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-push-AGtETEhE">git push</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-remote-zytJsKh4">git remote</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-archive-m6tpSDh1">git archive</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-submodule-8ytJhah9">git submodule</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#inspection-and-comparison-K6tkf5">Inspection and Comparison</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-show-YztPiWfq">git show</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-shortlog-Nytpu8fw">git shortlog</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-describe-AGtvIafE">git describe</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#debugging-YztvUD">Debugging</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-bisect-AGtzu5UE">git bisect</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-blame-zytqIbU4">git blame</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-grep-m6t9TyU1">git grep</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#patching-Nytgc1">Patching</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-cherry-pick-zytAu7c4">git cherry-pick</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-rebase-m6tJIVc1">git rebase</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-revert-8yteTQc9">git revert</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#email-AGtYtV">Email</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-apply-m6tKuXt1">git apply</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-am-8ytQIxt9">git am</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-format-patch-krtJTdtZ">git format-patch</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-imap-send-7btYs3tq">git imap-send</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-send-email-aKtMSmtE">git send-email</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-request-pull-r4tghQtn">git request-pull</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#external-systems-zytLF1">External Systems</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-svn-8ytMu3F9">git svn</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-fast-import-krt1IxFZ">git fast-import</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#administration-m6trC6">Administration</a>
+            <ol>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-gc-krt3uJCZ">git gc</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-fsck-7btVIxCq">git fsck</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-reflog-aKtyTkCE">git reflog</a>
+  </li>
+  <li data-type="sect2">
+    <a href="1-git-commands.html#git-filter-branch-r4t0sDCn">git filter-branch</a>
+  </li>
+</ol>
+      </li>
+  <li data-type="sect1">
+    <a href="1-git-commands.html#plumbing-commands-8ytkHz">Plumbing Commands</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+      </li>
+  <li data-type="index">
+    <a href="index.html">Index</a>
+            <ol>
+</ol>
+      </li>
+</ol>
+</nav></p>
+    <div class="navigation">
+      <ul>
+        <li><a href="1-introduction.html" title="Getting Started">Next</a></li>
+        <li><a href="introduction.html" title="Introduction">Previous</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
